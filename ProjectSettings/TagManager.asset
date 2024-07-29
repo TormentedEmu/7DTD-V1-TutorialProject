@@ -58,6 +58,12 @@ TagManager:
   - SB_TriggerVolume
   - SB_InfoVolume
   - SB_WallVolume
+  - LOD
+  - E_VehicleStrong
+  - E_BP_Temp
+  - AudioRigidBody
+  - ModMesh
+  - ModOn
   layers:
   - Default
   - TransparentFX
@@ -66,7 +72,7 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - LightLocal
   - NoShadow
   - Background Image
   - HoldingItem
