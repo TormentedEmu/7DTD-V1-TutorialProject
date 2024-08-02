@@ -4,4 +4,8 @@ using UnityEngine;
 
 public class AnimationEventBridge : MonoBehaviour
 {
+    public void PlayStepSound()
+    {
+
+    }
 }
