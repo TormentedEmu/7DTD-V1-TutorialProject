@@ -64,16 +64,19 @@
     <Compile Include="Assets\Scripts\Stubs\AnimationEventBridge.cs" />
     <Compile Include="Assets\Scripts\Stubs\AnimatorWeaponRangedReloadState.cs" />
     <Compile Include="Assets\DuckType\Jiggle\Jiggle.cs" />
+    <Compile Include="Assets\Methelina\Scripts\ElectricShockController.cs" />
     <Compile Include="Assets\DuckType\Jiggle\Extensions.cs" />
     <Compile Include="Assets\DuckType\Jiggle\JiggleScheduler.cs" />
     <Compile Include="Assets\DuckType\Jiggle\FrameRateLimiter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\A21TutorialAssets\TFPItems\Assets\Shader\GameEntity Tint Mask.shader" />
+    <None Include="Assets\TFP\CREDITS.txt" />
     <None Include="Assets\A21TutorialAssets\Shaders\XythTextureBlend3.shader" />
     <None Include="Assets\A21TutorialAssets\TFPItems\Assets\Shader\GameAutodesk XFade.shader" />
     <None Include="Assets\Emu\Shaders\AutodeskInteractiveDoubleSided.shader" />
     <None Include="Assets\A21TutorialAssets\TFPItems\Assets\Shader\GameGlass Reflex.shader" />
+    <None Include="Assets\Methelina\CREDITS.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

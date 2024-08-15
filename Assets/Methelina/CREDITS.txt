@@ -1,0 +1,5 @@
+Shader code, Shadergraph file, textures, electric shock controller script provided courtesy of:
+
+    Linda MacGill aka Methelina
+     https://www.linkedin.com/in/methelina/
+     Discord tag: methelina
