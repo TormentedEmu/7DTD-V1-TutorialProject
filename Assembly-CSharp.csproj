@@ -73,6 +73,8 @@
     <None Include="Assets\A21TutorialAssets\TFPItems\Assets\Shader\GameEntity Tint Mask.shader" />
     <None Include="Assets\TFP\CREDITS.txt" />
     <None Include="Assets\A21TutorialAssets\Shaders\XythTextureBlend3.shader" />
+    <None Include="Assets\TFP\V1\Shaders\Game_Character_Ripped.shader" />
+    <None Include="Assets\TFP\V1\Shaders\Game_Autodesk_Ripped.shader" />
     <None Include="Assets\A21TutorialAssets\TFPItems\Assets\Shader\GameAutodesk XFade.shader" />
     <None Include="Assets\Emu\Shaders\AutodeskInteractiveDoubleSided.shader" />
     <None Include="Assets\A21TutorialAssets\TFPItems\Assets\Shader\GameGlass Reflex.shader" />

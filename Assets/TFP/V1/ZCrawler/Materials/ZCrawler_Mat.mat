@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ZCrawler_Mat
-  m_Shader: {fileID: -6465566751694194690, guid: e7435a0142f671d4bbe3855565078c47, type: 3}
+  m_Shader: {fileID: 4800000, guid: 8a1a648b47615494dab28e9e4a541b11, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -100,6 +100,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 9470f283644800549a45ad9068c6c11f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _BUILTIN_QueueControl: 0
@@ -109,9 +113,11 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _ELECTRIC_SHOCK: 0
+    - _Fade: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _Irradiated: 0
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -122,7 +128,9 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
+    - __dirty: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissiveColor: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
