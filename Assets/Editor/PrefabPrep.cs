@@ -22,13 +22,13 @@ namespace PrefabTools_TE
     ///              Go to Window -> Package Manager -> Packages: Unity Registry -> FBX Exporter
     /// 
     /// 
-    /// I can be found in Guppycur's Unofficial 7 Days to Die modding community discord
+    /// I can be found in Guppycur's Unofficial(Official to me!) 7 Days to Die modding community discord
     /// 
     /// Cheers,
     /// 
-    /// TormentedEmu (aka V)
+    /// Emu (aka V)
     /// 
-    /// Discord tag: tormentedemu
+    /// Discord tag: emu46
     /// Discord invite link: https://discord.gg/DN33qqM7am
     /// 
     /// </summary>
@@ -363,7 +363,7 @@ namespace PrefabTools_TE
 
         public void CheckHierarchy()
         {
-            CheckMeshNames();
+            //CheckMeshNames();
             CheckSkeleton();
             CheckLargeCollider();
             CheckIconTag();
@@ -475,8 +475,8 @@ namespace PrefabTools_TE
                 if (mesh.name.Contains("LOD")) // ignore renaming if the name already contains LOD
                     continue;
 
-                if (!mesh.name.StartsWith("sm")) // add the prefix sm which is short for skinned mesh or static mesh
-                    mesh.name = "sm" + mesh.name;
+                //if (!mesh.name.StartsWith("sm")) // add the prefix sm which is short for skinned mesh or static mesh
+                    //mesh.name = "sm" + mesh.name;
             }
         }
 
@@ -506,9 +506,29 @@ namespace PrefabTools_TE
 
         private void CheckMeshTags()
         {
+            // Find LOD0 first
+            var lod0Mesh = Meshes.FirstOrDefault(m => m.gameObject.name == "LOD0");
+            if (lod0Mesh != null)
+            {
+                Debug.Log($"Found mesh LOD0 - setting tag {Tags.Mesh}.");
+
+                lod0Mesh.tag = Tags.Mesh;
+                return;
+
+                // should we relocate the LOD0 if it's not a child of the root object??
+
+                //Unpack();
+                //lod0Mesh = Meshes.FirstOrDefault(m => m.transform.name.ToLower().Contains("body"));
+                //if (lod0Mesh == null)
+                //lod0Mesh = Meshes.First();
+
+                //firstMesh.transform.parent = CurrentPrefab.transform;
+            }
+
             var firstMesh = Meshes.FirstOrDefault(m => m.gameObject.transform.parent != null && m.gameObject.transform.parent == CurrentPrefab.transform);
             if (firstMesh == null)
             {
+                // If the first mesh found is not a direct child of the root, move it there now so it's the same as vanilla
                 Debug.Log($"Moving mesh to game object root transform.");
                 Unpack();
                 firstMesh = Meshes.FirstOrDefault(m => m.transform.name.ToLower().Contains("body"));
@@ -630,6 +650,55 @@ namespace PrefabTools_TE
                             child.gameObject.tag = Tags.HeadGore;
                         }
                         break;
+
+                    case "LeftUpperArmGore":
+                        {
+                            child.gameObject.tag = Tags.LeftUpperArmGore;
+                        }
+                        break;
+
+                    case "LeftLowerArmGore":
+                        {
+                            child.gameObject.tag = Tags.LeftLowerArmGore;
+                        }
+                        break;
+
+                    case "RightUpperArmGore":
+                        {
+                            child.gameObject.tag = Tags.RightUpperArmGore;
+                        }
+                        break;
+
+                    case "RightLowerArmGore":
+                        {
+                            child.gameObject.tag = Tags.RightLowerArmGore;
+                        }
+                        break;
+
+                    case "LeftUpperLegGore":
+                        {
+                            child.gameObject.tag = Tags.LeftUpperLegGore;
+                        }
+                        break;
+
+                    case "LeftLowerLegGore":
+                        {
+                            child.gameObject.tag = Tags.LeftLowerLegGore;
+                        }
+                        break;
+
+                    case "RightUpperLegGore":
+                        {
+                            child.gameObject.tag = Tags.RightUpperLegGore;
+                        }
+                        break;
+
+                    case "RightLowerLegGore":
+                        {
+                            child.gameObject.tag = Tags.RightLowerLegGore;
+                        }
+                        break;
+
 
                     case "LeftArm":
                         {
@@ -800,6 +869,7 @@ namespace PrefabTools_TE
 
         public void CheckGoreObjects()
         {
+
             var spine2 = FindDirectChild("Origin/Hips/Spine/Spine1/Spine2");
             if (spine2 != null)
             {

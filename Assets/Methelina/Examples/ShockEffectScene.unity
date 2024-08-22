@@ -489,6 +489,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZCrawler_Exported
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ec4644bcc5239a24da0c5bcfb6013bf4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2063524308175803288, guid: ec4644bcc5239a24da0c5bcfb6013bf4, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -500,7 +504,7 @@ PrefabInstance:
     - target: {fileID: 4900787031749703355, guid: ec4644bcc5239a24da0c5bcfb6013bf4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e8d1299567a79ad4bbad100a674fc2c2, type: 2}
+      objectReference: {fileID: 2100000, guid: ac75ea543ec60bb4a99fa40e20176720, type: 2}
     - target: {fileID: 8506582790188381801, guid: ec4644bcc5239a24da0c5bcfb6013bf4, type: 3}
       propertyPath: m_IsActive
       value: 1
